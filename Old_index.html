@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Positioning Example</title>
+    <style>
+        /* Styling for the containers */
+        body {
+            padding: 0;
+            margin: 0;
+            overflow-x: hidden;
+            font-family: monospace;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            background-color: #090b0f;
+            height: fit-content;
+            overflow-x: hidden;
+        }
+
+        .box {
+            height: 100%;
+            width: 100%;
+            position: relative;
+            margin: 0;
+            padding: 0;
+        }
+      
+        .card {
+            max-width: 100%;
+            height: 100px;
+            border: 1px solid #333;
+            margin: 0;
+            padding: 0;
+            flex-wrap: wrap;
+            background-color: #f0f0f0;
+            height: fit-content;
+            overflow: hidden;
+        }
+
+        .card .h1 {
+            white-space: normal;
+        }
+
+        .d-flex {
+            display: flex;
+            flex-wrap: wrap
+        }
+
+        .wrap {
+            flex-wrap: wrap;
+        }
+
+        /* Relative positioning example */
+        .relative {
+            position: relative;
+        }
+
+        .absolute {
+            position: absolute;
+        }
+
+        /* Absolute positioning example */
+
+        .inline-block {
+            display: inline-block;
+        }
+
+        .fit {
+            height: fit-content;
+            width: fit-content;
+        }
+
+
+        .top-nav {
+            top: 0;
+            display: block;
+            position: sticky;
+            min-height: 40px;
+            /* height: fit-content; */
+            background-color: #0c131f;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+
+        .top-nav-item {
+            width: 200px;
+            height: 50px;
+            border: 1px solid #333;
+            margin: 10px;
+            padding: 5px;
+            overflow: hidden;
+            width: fit-content;
+            white-space: nowrap;
+        }
+
+
+        /*  */
+
+     
+
+
+        .w-100vw {
+            width: 100vw;
+        }
+
+        .h-100vh {
+            height: 100vh;
+        }
+
+        .w-50vw {
+            width: 50vw;
+        }
+
+        .w-40vw {
+            width: 40vw;
+        }
+
+        .w-35vw {
+            width: 35vw;
+        }
+        .w-30vw {
+            width: 30vw;
+        }
+
+
+        .bg-transparent {
+            background-color: #ffffff00;
+        }
+
+        .bg-dark {
+            background-color: #090b0f;
+        }
+
+        .bg-white {
+            background-color: #e0e0e0;
+        }
+
+        .w-50 {
+            width: 50%;
+        }
+
+
+        .w-100 {
+            width: 100%;
+        }
+
+        /* margins */
+        .m-0 {
+            margin: 0;
+        }
+
+        .m-w-75 {
+            max-width: 75%;
+        }
+
+        .m-w-100 {
+            max-width: 100%;
+        }
+        
+        .m-w-50 {
+            max-width: 50%;
+        }
+
+
+        .mb-0 {
+            margin-bottom: 0;
+        }
+
+        .mb-1 {
+            margin-bottom: 10px;
+        }
+
+        .mt-0 {
+            margin-top: 0;
+        }
+
+        .mt-5 {
+            margin-top: 50px;
+        }
+
+        .ms-3 {
+            margin-left: 30px;
+        }
+
+        .ms-5 {
+            margin-left: 50px;
+        }
+
+
+        /* paddings */
+        .pt-5 {
+            padding-top: 50px;
+        }
+
+        .px-1 {
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+
+        .ps-1 {
+            padding-left: 10px;
+        }
+
+
+        .ps-2 {
+            padding-left: 20px;
+        }
+
+        .ps-3 {
+            padding-left: 30px;
+        }
+
+        .ps-4 {
+            padding-left: 40px;
+        }
+
+        .ps-5 {
+            padding-left: 50px;
+        }
+
+        /* positionings */
+        .top-40 {
+            top: 40%;
+        }
+
+        .top-30 {
+            top: 30%;
+        }
+
+        .top-35 {
+            top: 5%;
+        }
+
+        /*  */
+        .text-300 {
+            font-size: 300px;
+        }
+
+        .text-50 {
+            font-size: 50px;
+        }
+
+        .text-white {
+            color: #e0e0e0;
+
+        }
+
+        .bio {
+            top: 10%;
+            margin: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container w-100vw h-100vh">
+        <div class="box bg-transparent w-35vw">
+            <div class="card m-w-100 bg-dark relative bio" style="width: 1000px;">
+
+                
+                <div class="ms-5 ps-5">
+                    <h1 class="text-white mb-1">Hello, I'am</h1>
+                    <h1 class="text-50 text-white mt-0">Benz Enriquez.</h1> 
+                </div>
+                
+            </div>
+            <div class="card m-w-100 bg-dark relative bio" style="width: 1000px;">
+                <div class="ms-5 ps-5">
+                    <h1 class="text-white mb-1">Hello, I'am</h1>
+                    <h1 class="text-50 text-white mt-0">Benz Enriquez.</h1> 
+                </div>
+                
+            </div>
+        </div>
+        <div class="box bg-transparent ps-5 w-50vw">
+            <div class="card bg-dark relative bio ps-5">
+                <h1 class="text-white mb-1">Hello, I'am</h1>
+                <h1 class="text-50 text-white mt-0">Benz Enriquez.</h1>
+            </div>
+        </div>
+    </div>
+   
+</body>
+
+</html>
