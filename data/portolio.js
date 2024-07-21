@@ -2,7 +2,7 @@ const portfolio = [
     {
         name: "theCreatives",
         description:
-            `An online art gallery.
+            `An online art gallery (casptone commision).
 Technologies: JavaScript, HTML5, CSS3, PHP, MySQL
 
 Do not use any real credentials like a real email address when using the demo.`,
@@ -17,7 +17,26 @@ Do not use any real credentials like a real email address when using the demo.`,
         ],
         demo: "http://thecreatives.infinityfreeapp.com/"
     },
+    {
+        name: "hjjrk",
+        description:
+            `An online health status form (capstone commision).
+Technologies: JavaScript, HTML5, CSS3, PHP, MySQL
 
+Do not use any real credentials like a real email address when using the demo.`,
+        title: "St. Micheal School Health Status Form",
+        media: [
+            "Logins",
+            "Announcements",
+            "Editor",
+            "HTForm",
+            "HTips",
+            "List",
+            "Report",
+            "UList",
+        ],
+        demo: "http://thecreatives.infinityfreeapp.com/"
+    },
 ];
 
 export default portfolio;
