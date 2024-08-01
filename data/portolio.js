@@ -8,7 +8,7 @@ Technologies: JavaScript, HTML5, CSS3, PHP, MySQL
 Do not use any real credentials like a real email address when using the demo.`,
         title: "theCreatives",
         media: [
-            "Logins",
+            "LogIns",
             "Home",
             "Item",
             "Cart",
