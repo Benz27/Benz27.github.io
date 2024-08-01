@@ -38,7 +38,7 @@ Do not use any real credentials like a real email address when using the demo.`,
         demo: "http://hjjrk.infinityfreeapp.com/"
     },
     {
-        name: "uframe",
+        name: "UFrame",
         description:
             `An e-commerce site (Academic Project).
 Technologies: JavaScript, HTML5, CSS3, PHP, MySQL
