@@ -29,6 +29,8 @@ window.addEventListener('DOMContentLoaded', event => {
             return (demo === false) ? toNode("Not available.") : toNode({
                 tag: "a",
                 href: demo,
+                target:"_blank", 
+                rel:"noopener noreferrer",
                 children: [
                     demo
                 ]
