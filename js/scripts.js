@@ -9,6 +9,7 @@ window.addEventListener('DOMContentLoaded', event => {
         const modalDescription = document.getElementById("modalDescription");
         const modalObject = new bootstrap.Modal(document.getElementById("portfolioModal"));
         const modalDemo = document.getElementById("modalDemo");
+        const modalSrc = document.getElementById("modalSrc");
 
         const setMedia = (portfolioItem) => {
             modalMediaContainer.innerHTML = "";
@@ -37,6 +38,23 @@ window.addEventListener('DOMContentLoaded', event => {
             });
         };
 
+        const setSource = (portfolioItem) => {
+            modalSrc.innerHTML = "";
+            modalSrc.appendChild(setSrcURL(portfolioItem.source));
+        };
+
+        const setSrcURL = (source) => {
+            return (source === false) ? toNode("Not available.") : toNode({
+                tag: "a",
+                href: source,
+                target:"_blank", 
+                rel:"noopener noreferrer",
+                children: [
+                    source
+                ]
+            });
+        };
+
         const setDemo = (portfolioItem) => {
             modalDemo.innerHTML = "";
             modalDemo.appendChild(setDemoURL(portfolioItem.demo));
@@ -47,10 +65,13 @@ window.addEventListener('DOMContentLoaded', event => {
             if (portfolioItem instanceof PortfolioItem === false) {
                 return;
             };
+            console.log(portfolioItem);
             setMedia(portfolioItem);
             setTitle(portfolioItem);
             setDescription(portfolioItem);
             setDemo(portfolioItem);
+            setSource(portfolioItem);
+
             modalObject.show();
         };
         return {
@@ -67,6 +88,7 @@ window.addEventListener('DOMContentLoaded', event => {
             ...data,
             onClick: modal.setContents
         });
+        console.log(p);
 
         portfolioItemsContainer.appendChild(p.node);
     };

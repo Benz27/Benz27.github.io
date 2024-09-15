@@ -1,7 +1,7 @@
 import { toNode } from "../js/toNode.js";
 import { generateMediaNodes } from "./PortFolioModalElements.js";
 export default class PortfolioItem {
-    constructor({ name, description = "", title, media, onClick, demo = false }) {
+    constructor({ name, description = "", title, media, onClick, demo = false, source = false }) {
         const thumbnail = `assets/img/portfolio/${name}/thumbnail.png`;
         const { node, node_structure } = this.buildNode({ thumbnail });
         this.onClick = (typeof onClick === "function") ? onClick : () => { };
@@ -11,6 +11,7 @@ export default class PortfolioItem {
         this.node = node;
         this.node_structure = node_structure;
         this.demo = demo;
+        this.source = source;
     };
     buildNode({ thumbnail }) {
         const node_structure = {
