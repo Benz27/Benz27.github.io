@@ -1,13 +1,14 @@
 import { toNode } from "../js/toNode.js";
-import { generateMediaNodes } from "./PortFolioModalElements.js";
+import { generateIFrameMediaNodes, generateMediaNodes } from "./PortFolioModalElements.js";
 export default class PortfolioItem {
-    constructor({ name, description = "", title, media, onClick, demo = false, source = false }) {
+    constructor({ name, description = "", title, media, onClick, demo = false, source = false, videos }) {
         const thumbnail = `assets/img/portfolio/${name}/thumbnail.png`;
         const { node, node_structure } = this.buildNode({ thumbnail });
         this.onClick = (typeof onClick === "function") ? onClick : () => { };
         this.description = description;
         this.title = title;
-        this.mediaNodes = generateMediaNodes({ name, media });
+        // this.mediaNodes = generateMediaNodes({ name, media });
+        this.mediaNodes = [...generateMediaNodes({ name, media }), ...generateIFrameMediaNodes({videos})]
         this.node = node;
         this.node_structure = node_structure;
         this.demo = demo;

@@ -60,6 +60,24 @@ Do not use any real credentials like a real email address when using the demo.`,
         demo: "http://uframe.infinityfreeapp.com/",
         source: "https://github.com/Benz27/UFrame"
     },
+    {
+        name: "TheSageTraveler",
+        description:
+            `A 2D math based adventure game for android
+            Technologies: C#, Unity Library
+
+            This APK is provided for educational purposes only. 
+            Some assets may be placeholders and are not licensed for redistribution.
+            `,
+
+        title: "The Sage Traveler: 2D math based adventure game.",
+        media: [
+            "one"
+        ],
+        demo: "https://drive.google.com/file/d/1maktUHz0JiChov3NxAK719uv6CHv3m5i/view?usp=drive_link",
+        source: "https://github.com/Benz27/theSageTraveler-asset-scripts",
+        videos: ["https://www.youtube.com/embed/BEALQztUl8Q"]
+    },
 ];
 
 export default portfolio;

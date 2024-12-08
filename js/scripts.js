@@ -10,6 +10,7 @@ window.addEventListener('DOMContentLoaded', event => {
         const modalObject = new bootstrap.Modal(document.getElementById("portfolioModal"));
         const modalDemo = document.getElementById("modalDemo");
         const modalSrc = document.getElementById("modalSrc");
+        const modalYt = document.getElementById("modalYt");
 
         const setMedia = (portfolioItem) => {
             modalMediaContainer.innerHTML = "";
@@ -19,7 +20,7 @@ window.addEventListener('DOMContentLoaded', event => {
         const setTitle = (portfolioItem) => {
             modalTitle.innerHTML = portfolioItem.title;
         };
-
+       
         const setDescription = (portfolioItem) => {
             modalDescription.innerHTML = portfolioItem.description;
             // modalDescription.style.height = 'auto';
@@ -35,6 +36,25 @@ window.addEventListener('DOMContentLoaded', event => {
                 children: [
                     demo
                 ]
+            });
+        };
+
+        const setYtFrame = (portfolioItem) => {
+            modalYt.innerHTML = "";
+            modalYt.appendChild(setYtNode(portfolioItem.source));
+        };
+
+        const setYtNode = (yt) => {
+            console.log(yt);
+            return (!yt) ? toNode("Not available.") : toNode({
+                tag: "iframe",
+                height: "315",
+                width:"560",
+                src:"https://youtu.be/BEALQztUl8Q",
+                title:"The Sage Traveler Gameplay",
+                frameborder:"0" ,
+                allow:"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture",
+                allowfullscreen : true
             });
         };
 
@@ -65,7 +85,7 @@ window.addEventListener('DOMContentLoaded', event => {
             if (portfolioItem instanceof PortfolioItem === false) {
                 return;
             };
-            console.log(portfolioItem);
+            // console.log(portfolioItem);
             setMedia(portfolioItem);
             setTitle(portfolioItem);
             setDescription(portfolioItem);
