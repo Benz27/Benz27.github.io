@@ -15,7 +15,7 @@ Do not use any real credentials like a real email address when using the demo.`,
             "Commision",
             "Artist"
         ],
-        demo: "http://thecreatives.infinityfreeapp.com/",
+        demo: "http://http://thecreatives.42web.io/",
         source: "https://github.com/Benz27/theCreatives"
     },
     {
@@ -36,7 +36,7 @@ Do not use any real credentials like a real email address when using the demo.`,
             "Report",
             "UList",
         ],
-        demo: "http://hjjrk.infinityfreeapp.com/",
+        demo: "http://hjjrk.freesite.online/",
         source: "https://github.com/Benz27/hjjrk",
     },
     {
@@ -57,7 +57,7 @@ Do not use any real credentials like a real email address when using the demo.`,
             "Orders",
             "Report",
         ],
-        demo: "http://uframe.infinityfreeapp.com/",
+        demo: "http://uframe.great-site.net/",
         source: "https://github.com/Benz27/UFrame"
     },
     {
