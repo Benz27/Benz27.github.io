@@ -15,7 +15,7 @@ Do not use any real credentials like a real email address when using the demo.`,
             "Commision",
             "Artist"
         ],
-        demo: "http://http://thecreatives.42web.io/",
+        demo: "http://thecreatives.42web.io/",
         source: "https://github.com/Benz27/theCreatives"
     },
     {
